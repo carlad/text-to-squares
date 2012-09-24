@@ -38,10 +38,15 @@ class PictureTest < Test::Unit::TestCase
 
   def test_rows_returns_an_array_of_picture_size_rows
     # i.e. given that picture.size is 3 it should have 3 rows
+    picture = Picture.new('something')
+    assert picture.rows.count == 3, 'the method row should return the number of rows.'
+    
   end
 
   def test_rows_returns_an_array_where_the_first_row_contains_picture_size_squares
     # i.e. given that picture.size is 3 the first row should have 3 squares
+    picture = Picture.new('somethingelsetyh')
+    assert picture.rows.first.length == 4
   end
 end
 

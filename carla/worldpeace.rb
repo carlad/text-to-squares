@@ -8,9 +8,9 @@ class Country
 	def initialize(options = {})
 		@name = options[:name]
 		@health = options[:health]
-		# @knowledge = knowledge
-		# @hunger = hunger
-		# @communication = communication
+		@knowledge = options[:knowledge]
+		@hunger = options[:hunger]
+		@communication = options[:communication]
 		@happiness = options[:happiness]
 	end
 
@@ -34,31 +34,31 @@ class Services
 	def provide_universal_health_care
 		if @health == "bad"
 			puts "We are sending doctors, nurses, and bandages #{@country}."
+		end
     end
-	end
 
 	def provide_free_education
 			if @knowledge == "bad"
 			puts "Welcome to the classroom #{@country}. Don't forget to do your homework!!"
-    end
+		end
 	end
 
 	def provide_delicious_food
 		if @hunger == "bad"
 			puts"Ready for blutwurst #{@country}?"
-    end
+		end
 	end
 
 	def provide_hi_speed_internet
 		if @communication == "bad"
 			puts "The lolcats are coming #{country}:-)"
-    end
+		end
 	end
 
 	def put_ecstacy_in_the_water
 		if @happiness == "bad"
 			puts "Just dance #{@country}!"
-    end
+    	end
 	end
 end
 
